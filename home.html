@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/all.css">
+    <title>Js Html Dom</title>
+
+</head>
+
+<body>
+  <!--start navbar-->
+  <ul class="navbar">
+    <li><a href="#" data-scroll="home">Home</a></li>
+    <li><a href="#"data-scroll="about-us">About Us</a></li>
+    <li><a href="#"data-scroll="services">Services</a></li>
+    <li><a href="#"data-scroll="solution">Solution</a></li>
+    <li><a href="#"data-scroll="products">Products</a></li>
+    <li><a href="#"data-scroll="content-us">Contact us</a></li>
+  </ul>
+  <!--end navbar-->
+
+  <!--Start Fixed Menu-->
+  <div class="fixed-menu">
+      <i class="fas fa-cog"></i>
+      <h3>Color Change</h3>
+      <ul class="change-colors">
+        <li data-color="blue"></li>
+        <li data-color="red"></li>
+        <li data-color="green"></li>
+        <li data-color="purple"></li>
+      </ul>
+      <h3>important Important</h3>
+           Important link
+  </div>
+   <!--Start Fixed Menu-->
+
+  
+
+  <!--Start section-->
+  <div id="home" class="block">
+    <h2>Home</h2>
+    <div class="popups">
+      <span class="show-popup" data-popup=".firstpopup">Show 1st popup</span>
+      <span class="show-popup" data-popup=".seconedpopup">Show 2st popup</span>
+    </div>
+    <!--Start Error Message-->
+
+      <div class="error-message">
+        This Is The First Error Message
+      </div>
+
+    <!--Start Error Message-->
+<!-- start buttons effects-->
+      <!--First button-->
+    <div class="buttons-effects">
+      <button class=" buttons-effect from-left">
+        <span></span>
+        <span>From left</span>
+      </button>
+      <!--Seconed button-->
+      <button class=" buttons-effect from-top">
+        <span></span>
+        <span>From Top</span>
+      </button>
+      <!--third button-->
+      <button class=" buttons-effect border-left">
+        <span></span>
+        <span>From Top</span>
+      </button>
+      <div class="buttons-effect">
+        <button class="buttons-effect bounce firstb"> bounce</button>
+      </div>
+      <div class="buttons-effect">
+        <button class="buttons-effect bounce secondb"> bounce</button>
+      </div>
+      </div>
+
+
+      <!-- start progrss bar-->
+      <div class="animation-prog color1">
+        <span data-progress="45%"></span>
+      </div>
+      <div class="animation-prog color2">
+        <span  data-progress="25%"></span>
+      </div>
+      <!-- End progrss bar-->
+
+      <!--Start gallary slider-->
+        <div class="gallary">
+
+                <div class="masterImg">
+                    <i class="skin-background fa fa-chevron-circle-left fa-lg"></i>
+                    <i class="skin-background fa fa-chevron-circle-right fa-lg"></i>
+                   <img src="images/a.jpg" alt="">
+                </div>
+
+                <div class="thumbnails">
+                    <img class="selected" src="images/a.jpg" alt="">
+                    <img src="images/aa.jpg" alt="">
+                    <img src="images/aaa.jpg" alt="">
+                    <img src="images/aaaa.jpg" alt="">
+                    <img src="images/aaaaa.jpg" alt="">
+                    <img src="images/1.jpg" alt="">
+                    <img src="images/2.jpg" alt="">
+                </div>
+
+        </div>
+        <div class="">
+          li
+        </div>
+
+      <!--end gallary slider-->
+
+      <!--Start toggle product-->
+
+        <div class="products">
+          <div class="product">
+            <h3>Product one</h3>
+            <span class="data">27/12/2019</span>
+            <img src="http://placehold.it/100/DDD/" alt="">
+            <i class="fas fa-plus fa-lg"></i>
+            <p class="discreption">This is first product</p>
+          </div>
+
+          <div class="product">
+            <h3>Product Two</h3>
+            <span class="data">27/12/2019</span>
+            <img src="http://placehold.it/100/100" alt="">
+            <i class="fas fa-plus fa-lg"></i>
+            <p class="discreption">This is seconed product</p>
+          </div>
+        </div>
+
+        <!--Start list /gridview-->
+
+        <div class="items list-view">
+          <div class="optionView">
+            <i class="fas fa-list fa-2x active" data-class="list-view"></i>
+            <i class="fas fa-th fa-2x "data-class="grid-view"></i>
+          </div>
+          <div class="item">
+            <h3>list one</h3>
+            <span class="data">27/12/2019</span>
+            <img src="http://placehold.it/100/DDD/" alt="">
+            <i class="fas fa-plus fa-lg"></i>
+            <p class="discreption">This is first list</p>
+          </div>
+
+          <div class="item">
+            <h3>list two</h3>
+            <span class="data">27/12/2019</span>
+            <img src="http://placehold.it/100/100" alt="">
+            <i class="fas fa-plus fa-lg"></i>
+            <p class="discreption">This is seconed list</p>
+          </div>
+        </div>
+        <!--End list /gridview-->
+        <!--Start Form-->
+        <div class="our-form">
+          <form action="">
+
+            <div class="">
+              <input class="detecte-unicode" type="text" required placeholder="type your name">
+              <span class="the-message">Please Fill this input</span>
+              <div class="unicode"></div>
+            </div>
+            <div class="">
+              <input class="auto-direction" type="email" required placeholder="type your email">
+              <span class="the-message">Please Fill this input</span>
+            </div>
+            <div class="">
+              <input type="password" required placeholder="type your password">
+              <span class="the-message">Please Fill this input</span>
+            </div>
+            <div class="">
+              <textarea required placeholder="type your message"></textarea>
+              <span class="the-message">Please Fill this input</span>
+            </div>
+            <div class="">
+              <input class="add-tag" type="text"  placeholder="type your tages and then press ,">
+              <div class="tags"></div>
+            </div>
+            <div>
+              <input type="file">
+            </div>
+            <input type="submit" value="send">
+            <div class="trimmed-text">
+              <p class="firtp">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ipsum nobis autem corporis enim eveniet amet velit dolore nesciunt aspernatur in rerum quisquam aliquid eaque modi ratione eos, doloremque quos.</p>
+              <p class="seconedp">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ipsum nobis autem corporis enim eveniet amet velit dolore nesciunt aspernatur in rerum quisquam aliquid eaque modi ratione eos, doloremque quos.</p>
+              <p class="thirdp">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ipsum nobis autem corporis enim eveniet amet velit dolore nesciunt aspernatur in rerum quisquam aliquid eaque modi ratione eos, doloremque quos.</p>
+            </div>
+
+            <div class="container same-height">
+              <div class="one">
+                Lcommodi vero accusamus omnis qui sed, dolores architecto numquam, nostrum neque cum illo reiciendis id dolor, fugit et placeat.
+              </div>
+              <div class="two">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel tempore suscipit eius, omnis delectus perferendis, quas commodi esse facilis qui autem blanditiis modi debitis accusantium repellat error quod eaque ullam.
+              </div>
+              <div class="three">
+                cumque quod at, deserunt autem aut.
+              </div>
+            
+            </div>
+            <!--Start Card-->
+            <div class="container">
+
+              <div class="cards">
+                <div class="card card-one"></div>
+                <div class="card card-two"></div>
+                <div class="card card-three"></div>
+                <div class="card card-four"></div>
+                <div class="card card-five"></div>
+                <div class="card card-six"></div>
+                <div class="card card-seven"></div>
+                <div class="card card-eight"></div>
+                </div>
+
+            </div>
+            <!--End Card-->
+            <!--blink warning-->
+
+          </form>
+          <div class="container">
+            <h3 class="blink-warning">This Is Warning</h3>
+          </div>
+          <div class="container">
+            <div class="todo-list">
+              <h3>ToDo list</h3>
+              <ul class="tasks">
+                  <li>the firt task</li>
+                  <li >the seconed task</li>
+                  <li>the third task</li>
+                  <li>the fourth task</li>
+              </ul>
+              <form class="add-task">
+                <input class="task-input" type="text" placeholder="Add new Task">
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <p class="typer" data-text='Hellow this text created by Mhmoud Shaban Saddek'></p>
+        </div>
+
+        <Div>
+          <table class="summary">
+            <tr>
+              <td>Name</td>
+              <td>Value</td>
+              <td>Price</td>
+            </tr>
+            <tr>
+              <td>Data one</td>
+              <td>10 items</td>
+              <td class="price">100</td>
+            </tr>
+            <tr>
+              <td>Data Two</td>
+              <td>5 items</td>
+              <td class="price">80</td>
+            </tr>
+            <tr>
+              <td>Data three</td>
+              <td>1 items</td>
+              <td class="price">20</td>
+            </tr>
+            <tr>
+              <td>Data four</td>
+              <td>20 items</td>
+              <td class="price">200</td>
+            </tr>
+            <tr>
+              <td>Data five</td>
+              <td>2 items</td>
+              <td class="price">28</td>
+            </tr>
+            <tr>
+              <td colspan="2">Total :</td>
+              <td class="the-total">hundred</td>
+            </tr>
+          </table>
+        </Div>
+
+        <!--Start -->
+        <div class="container">
+          <div class="text-ticker">
+            <h3>Tody Notes</h3>
+            <ul class="tricker-list">
+              <li class="active">This is line number one to test</li>
+              <li>This is line number two to test</li>
+              <li>This is line number three to test</li>
+              <li>This is line number four to test</li>
+              <li>This is line number five to test</li>
+              <li>This is line number six to test</li>
+            </ul>
+          </div>
+        </div>
+        <div class="container">
+          <span class="switch-tab">Swich Tabs</span>
+          <div class="dynamic-tabs left-tab">
+            <ul class="tabs-list">
+              <li class="active" data-content=".content-one">one</li>
+              <li data-content=".content-two">two</li>
+              <li data-content=".content-thee">three</li>
+              <li data-content=".content-four">four</li>
+              <li data-content=".content-five">Five</li>
+            </ul>
+            <div class="content-list">
+              <div class="content-one">Content num one</div>
+              <div class="content-two">Content num two</div>
+              <div class="content-thee">Content num thee</div>
+              <div class="content-four">Content num four</div>
+              <div class="content-five">Content num five</div>
+            </div>
+          </div>
+
+        </div>
+        <div class="container">
+          <form action="">
+            <input type="email"
+            class="email-suggest"
+             name="email"
+            autocomplete="off"
+            placeholder="type your Email"/>
+
+          </form>
+        </div>
+         <!--End Form-->
+
+  </div>
+  <div id="about-us" class="block">
+    <h2>About Us</h2>
+  </div>
+  <div id="services" class="block">
+    <h2>Services</h2>
+  </div>
+  <div id="solution" class="block">
+    <h2>Solution</h2>
+  </div>
+  <div id="products" class="block">
+    <h2>Products</h2>
+  </div>
+  <div id="content-us" class="block">
+    <h2>Contact us</h2>
+  </div>
+  <!--end section-->
+  <!--start button to scroll-->
+  <a href="#" class="top">
+    <i class="fas fa-chevron-up"></i>
+  </a>
+    <!--end button to scroll-->
+
+    <!--start button to scroll-->
+    <div class="popup firstpopup">
+      <div class="inner">
+        <h2>This is 1st popup</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+        <button class="close">Close</button>
+      </div>
+    </div>
+    <div class="popup seconedpopup">
+      <div class="inner">
+        <h2>This is 2st popup</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+        <button class="close">Close</button>
+      </div>
+    </div>
+
+    <!--end button to scroll-->
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

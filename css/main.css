@@ -1,0 +1,745 @@
+*{
+  padding:0 ;
+  margin: 0;
+  list-style: none;
+  font-family: tahoma;
+  -webkit-box-sizing: border-box;
+  box-sizing :border-box;
+}
+.top{
+  background-color: #333;
+  color: #fff;
+  padding: 5px 5px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  display: none;
+
+}
+.navbar{
+    list-style: none;
+    padding:0px ;
+    margin:0 ;
+    background-color:rgba(0,0,0,.6);
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.navbar li{
+    display: inline-block;
+    padding: 10px;
+}
+.navbar li a{
+    color: #eee;
+    text-decoration: none;
+}
+.block{
+    min-height: 1000px;
+    background-color: #ccc;
+    margin-bottom: 10px;
+    padding: 50px 0;
+    text-align: center;
+}
+.navbar li a.active{
+    color: yellow
+}
+.popup{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background-color: rgba(178, 187, 187, 0.7);
+  display: none;
+}
+.popup .inner{
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: 300px;
+  height: 250px;
+  left: 50%;
+  position: fixed;
+  margin-left: -150px;
+  top: 50%;
+  margin-top: -125px;
+  border-radius: 10px;
+}
+.popup .inner h2{
+  color: #777;
+  margin: 0 0 10px;
+  border-bottom: 1px solid #EEE;
+  padding-bottom: 1px;
+}
+.popup .inner p{
+  color: #aaa;
+  line-height: 1.6;
+}
+.popup .inner .close{
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  padding: 2px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.show-popup {
+  cursor: pointer;
+  display:block;
+  text-align: center;
+  margin: 20px;
+  background-color: #fff;
+  width: 140px;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  color: #928440;
+}
+/**Start buttons effects + lessons 40*******************************/
+.buttons-effect{
+  cursor: pointer;
+  width: 140px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;        /**مهمتها انها بتحذف البوردر الابيض ده**/
+  display: block;
+  margin-left: 10px;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.buttons-effect span:first-child{
+  position: absolute;
+  left: 0;  /**علشان الخاصيه هتيجى من الشمال لليمين**/
+  top: 0;
+  display: block;
+  z-index: 1;
+}
+
+.buttons-effect span:last-child{
+  position: relative;        /**علشان مرتبط باللاسبان اللى فو**/
+  z-index: 2
+}
+.buttons-effect.from-left{
+    background-color: #1289A7;
+}
+.buttons-effect.from-left span:first-child{
+    background-color:#006266;
+    width: 0;
+    height: 100%;
+}
+.buttons-effect.from-top{
+    background-color: #12CBC4;
+}
+.buttons-effect.from-top span:first-child{
+  background-color: #ED4C67;
+  width: 100%;
+  height: 0;
+}
+.border-left{
+  border-radius: 0;
+  background-color: #fff;
+  color: #006266;
+    overflow: visible;      /**ركز فيها عملناها علشان الاب نفسه هيدين ف مش هيظهرالقيمه -3  ش**/
+}
+.bounce{
+  background-color: #00f;
+  margin-top: 30px;
+  border-radius: 0;
+  position: relative;
+}
+.border-left span:first-child{
+  background-color:#12CBC4;
+  widows: 0;;
+  height: 3px;
+  top: auto;
+  bottom: -3px;
+
+}
+.animation-prog{
+  width: 300px;
+  height: 30px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  margin: 20px 10px;
+  background-color: #f6f6f6;
+  overflow: hidden;
+}
+.animation-prog span{
+  height: 100%;
+  width: 0;
+  display: block;
+  text-align: right;
+  color: #FFF;
+  text-indent: 20px;
+}
+.color1 span{
+  background-color: #12CBC4;
+}
+.color2 span{
+  background-color: #ED4C67;
+}
+/*Start Menu bar*/
+.fixed-menu{
+  background-color: #333;
+  color: #eee;
+  width: 250px;
+  left: -250px;  /** فى اول التصميم كان زيرو دلوقتى عطيناله عكس ال العرض 270 علشان البادنج**/
+  height: 100%;
+  padding: 10px;
+  position: fixed;                    /**up to you**/
+  top: 0;
+  z-index: 9999;
+}
+.fixed-menu .fa-cog{
+  position:absolute;
+  right: -23px;        /**لازم علشان نخلي الصوره بره القائمه نفسها**/
+  top: 42px;
+  width:23px ;
+  height: 25px;
+  text-align: center;
+  line-height: 1.5;       /**بنعامل الصوره كتيكست عادى**/
+  border-radius: 0 10px 10px 0;
+  background-color: #333;
+  cursor: pointer;
+}
+/*End Menu bar*/
+.fixed-menu .change-colors li{
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  padding: 5px;
+  margin: 5px;
+  cursor: pointer;
+}
+/*دى الوان الموجوده فى اللسته*/
+.fixed-menu .change-colors [data-color="blue"] {
+  background-color: #3498db;
+}
+.fixed-menu .change-colors [data-color="red"]{
+  background-color: #ED4C67;
+}
+.fixed-menu .change-colors [data-color="green"]{
+  background-color: green;
+}
+.fixed-menu .change-colors [data-color="purple"]{
+  background-color: purple;
+}
+/* ودى الالوان اللى بنضيفها على الاتربيوت الجديد بتكون نفس الالوان*/
+[data-new="blue"] .skin-color{
+  color: #3498db;
+}
+[data-new="blue"] .skin-background{
+  background-color: #3498db;
+}
+
+[data-new="red"] .skin-color{
+  color: #ED4C67;
+}
+[data-new="red"] .skin-background{
+  background-color: #ED4C67;
+}
+
+[data-new="green"] .skin-color{
+  color:green;
+}
+[data-new="green"] .skin-background{
+  background-color: green;
+}
+
+[data-new="purple"] .skin-color{
+  color: purple
+}
+[data-new="purple"] .skin-background{
+  background-color: purple;
+}
+/*Start gallary*/
+.gallary{
+  width: 800px;
+  margin: auto;
+  
+}
+.gallary img{
+  max-width: 100%;
+  padding: 3px;
+  background-color: rgba(255, 255, 255, 0.746);
+}
+.gallary .masterImg{
+  height: 452px;          /*جرب تشيلها هتلاقى الديف بيطلع لفوق بيتنطط */
+  position: relative;     /*علشان هضع فيهاايكونات الرجوع وللامام ف الوضع المطلق*/
+}
+.gallary .masterImg i{
+  color: red;
+  padding: 5px 10px;
+  position:absolute;
+  top: 0;
+  z-index: 2;
+  line-height: 1.1;
+  cursor: pointer;
+}
+.gallary .masterImg .fa-chevron-circle-left{
+  left: 0;
+}
+.gallary .masterImg .fa-chevron-circle-right{
+  right: 0;
+}
+.gallary .thumbnails{
+  overflow: hidden;                       /*من غيرها الصوره هتدخل عالابوت اسس*/
+}
+.gallary .thumbnails img{
+ /* width: 19.60%;    /*بنخصم المارجن ريت على عدد الصور يعنى 100-2  96 /5 (حذفتها ووضعتها ف ال جي اس*/
+  float: left;
+  border: 2px solid rgba(187, 187, 187, 0.39);       /*استخدما فوق حاصيه البوكس سايزنج*/
+  cursor: pointer;
+  opacity: .5;
+  transition: all .4s ease-in-out;
+}
+.gallary .thumbnails img:last-child{
+  margin-right: 0 !important; /*اقوى من ال فى الجيكويرى  inline syle */
+}
+.gallary .thumbnails img.selected{
+  border: 2px solid #ED4C67; 
+  opacity: 1;
+}
+
+.products{
+  width:800px;
+  margin: 30px auto;
+  overflow: hidden;
+}
+.products .product{
+  width: 49%;
+  float: left;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+.products .product .data{
+  display: block;
+}
+.products .product:first-child{
+  margin-right: 1px;
+}
+.products .product i{
+  display: block;
+  padding: 10px;
+  background-color: #ccc; 
+  margin:10px 0;
+  cursor: pointer;
+}
+.products .product .discreption{
+  padding: 10px;
+  display: none;
+}
+/*end products*/
+
+/*Start girdiew*/
+.items{
+  width:800px;
+  margin: 30px auto;
+  overflow: hidden;
+}
+.items.grid-view .item{
+  width: 49%;
+  float: left;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+.items.grid-view .item .data{
+  display: block;
+}
+.items.grid-view .item:first-child{
+  margin-right: 1px;
+}
+.items.grid-view .item i{
+  display: block;
+  padding: 10px;
+  background-color: #ccc; 
+  margin:10px 0;
+  cursor: pointer;
+}
+
+
+.items.grid-view .item .discreption{        
+  padding: 10px;
+  display: none;
+}
+/********************************************************************************************
+*                                      ListView */
+.items.list-view .item{
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  position: relative;
+  height: 110px;
+}
+.items.list-view .item h3{
+  margin-top: 15px;
+  margin-left: 110px;
+}
+.items.list-view .item img{
+  position: absolute;;
+  top: 5px;
+  left: 5px;
+}
+.items.list-view .item .data{
+  display: block;
+  color: #888;
+  font-size: 12px;
+  margin: 5px 0 5px 110px;
+}
+.items.list-view .item i{
+ display: none;
+}
+.items.list-view .item .discreption{
+  margin: 0 0 0 110px;
+}
+.items .optionView{
+  overflow: hidden;
+}
+.items .optionView i{
+  float: right;
+  padding: 20px;
+  cursor: pointer;
+}
+.items .optionView i.active{
+  color:#00f
+}
+
+/*end girdiew*/
+/*Strt error-message*/
+.error-message{
+  padding:10px;
+  background-color: #3498db;
+  color: #fff;
+  font-size: 20px;
+  width: 600px;
+  text-align: center;
+  position: fixed;
+  top: 80px;
+  right: -600px;
+  z-index: 9999;
+}
+
+/*End  error-message*/
+
+/*Start Forms*/
+.our-form{
+  width: 800px;
+  margin:auto;
+}
+.our-form form{
+ text-align: left;
+  
+}
+.our-form form input,
+.our-form form textarea,
+.our-form .custom-file {
+  margin-bottom: 20px;
+  width: 500px;
+  margin-right: 10px;
+}
+.our-form input[type="text"],
+.our-form input[type="email"],
+.our-form input[type="password"],
+.our-form textarea{
+  padding: 10px;
+}
+.our-form textarea{
+  height: 180px;
+}
+.our-form input[type="submit"]{
+  padding: 15px;
+  font-size: 16px;
+}
+.our-form .the-message{
+  display: none
+}
+.our-form .custom-file input[type="file"]{
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top:0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+
+}
+.our-form .custom-file{
+  background-color: #fff;
+  border: 1px solid #EEE;
+  position: relative;
+  height: 40px;
+}
+.our-form .custom-file span{
+  display: inline-block;
+  padding: 8px 12px;
+}
+.our-form .custom-file .fa-upload{
+  top: 10px;
+  right: 10px;
+  position: absolute;
+  z-index: 1;
+
+}
+.our-form .tags span{
+  padding: 5px 10px;
+  background-color: #dedede;
+  display: inline-block;
+  margin: 10px 10px 10px 0;
+  border-radius: 8px;
+  color: #6f6f6f;
+}
+.our-form .tags span i{
+  margin-right: 5px;
+  color: #969696;
+  cursor: pointer;
+}
+
+.our-form .tags span i:hover{
+  color:#333;
+}
+/*End Forms*/
+
+/*Start how to put trimmed text*/
+.trimmed-text p{
+  background-color:#DDD;
+  padding:10px;
+  margin-bottom: 20px;
+}
+/*Start same hieght*/
+.same-height{
+  overflow: hidden;
+}
+.same-height div{
+  width: 30%;
+  margin-right: 1%;
+  float: left;
+  background-color: #DDD;
+  padding: 10px;
+}
+/*Start card*/
+.cards{
+  position: relative;
+  min-height: 300px;
+  margin-top: 50px;
+  margin-left:-75px;
+  cursor: pointer;
+  z-index: 1;
+  
+}
+.cards .card{
+  width:150px;
+  height:150px;
+  border: 1px solid #333;
+  position: absolute;
+  left: 50%;
+}
+.cards .card-one{
+  background-color: #e74c3c ;
+}
+.cards .card-two{
+  background-color:#e67e22 ;
+}
+.cards .card-three{
+  background-color: #f1c40f;
+}
+.cards .card-four{
+  background-color:#34495e ;
+}
+.cards .card-five{
+  background-color:#9b59b6 ;
+}
+.cards .card-six{
+  background-color:#3498db ;
+}
+.cards .card-seven{
+  background-color: #2ecc71 ;
+}
+.cards .card-eight{
+  background-color: #1abc9c;
+}
+/*start warning*/
+.blink-warning{
+  background-color:#fff;
+  padding: 10px;
+  margin: 20px auto;
+  width: 200px;
+  color: #cc0d0d;
+  border: 2px solid #10abd4;
+  text-emphasis: center;
+}
+/*do list tasks*/
+
+.todo-list{
+  width:400px;
+  margin: 20px auto;
+  background-color: #fff;
+  border:2px solid #6f6f6f
+}
+.todo-list h3{
+  margin: 0;
+  padding: 15px;
+  background-color: #fff;
+  border-bottom: 2px solid #e67e22;
+}
+.tasks{
+  list-style: none;
+
+}
+.tasks li{
+  padding:15px 20px;
+  border-bottom:1px dashed #ccc;
+  color: #484848;
+  cursor: pointer;
+}
+.add-task .task-input{
+  padding:15px 20px;
+  border:none;
+  width:100%
+
+}
+/*calculate items */
+.summary{
+  width: 100%;
+  margin: 40px auto;
+}
+.summary td{
+  background-color: #fff;
+  padding: 10px;
+  vertical-align: middle;
+}
+.summary tr:first-child td{
+  background-color: #444;
+  color: #fff;
+}
+.summary tr:last-child td:first-child{
+  text-align: right;
+}
+/*Start Auto Change notes*/
+.text-ticker{
+  width: 400px;
+  margin: 20px auto;
+  background-color: #fff;
+
+}
+.text-ticker h3{
+  padding: 10px;
+  margin: 0;
+  background-color: #eee;
+}
+.text-ticker .tricker-list{
+  list-style: none;
+}
+
+.text-ticker .tricker-list li{
+  padding: 15px;
+}
+.text-ticker .tricker-list li:not(.active){
+  display: none;
+}
+/*start tabs*/
+.table-list{
+  width:200px;
+}
+.tabs-list li{
+  padding:15px 30px;
+  background-color: #fff;
+  display: inline-block;
+  top: 1px;
+  position: relative;
+  cursor: pointer;
+  border: 1px solid #ccc;
+
+}
+.tabs-list .active,
+.tabs-list li:hover{
+  color:#050
+}
+.tabs-list .active{
+  border-bottom: 1px solid #fff;
+  z-index:2
+}
+.content-list{
+  border: 1px solid #ccc;
+  background-color: #fff;
+  position: relative;
+}
+.content-list >div{
+  padding:20px;
+  min-height:200px;
+}
+.content-list >div:not(:first-child){
+  display: none;
+}
+.switch-tab{
+  padding:10px;
+  background-color: #efefef;
+  border: 1px solid #ccc;
+  display: inline-block;
+  margin:20px;
+  cursor: pointer;
+}
+.left-tab{
+  overflow: hidden;
+}
+.left-tab .tabs-list,
+.left-tab .content-list{
+  float: left;
+}
+.left-tab .tabs-list li{
+  display: block;
+  top: 0;
+  left: 1px;
+}
+.left-tab .tabs-list .active{
+  border-bottom: 1px solid #ccc;
+  border-right:1px solid #fff;
+}
+.left-tab .content-list{
+  min-height: 300px;
+  width: calc(100% - 103px);
+}
+/*Email suggest*/
+.email-suggest{
+  margin: 20px 0 0;
+  padding: 10px;
+  width: 220px;
+  border: 1px solid #CCC;
+}
+.suggest-box{
+  margin:15px 0 0;
+  width:320px;
+  background-color: #fdfdfd;
+  position: relative;
+  border:1px solid #e8e8e8;
+  line-height: 1.8;
+  color:#888 
+}
+.suggest-box::before{
+  content: '';
+  position: absolute;
+  left:10px;
+  top: -20px;
+  border-style: solid;
+  border-width: 10px;
+  border-color:transparent transparent #fdfdfd ;
+}
+.suggest-box li{
+  padding: 10px;
+  border: 1px dashed #eccece ;
+  cursor: pointer;
+
+}
+.suggest-box li:hover{
+  background-color: #ddd;
+}
